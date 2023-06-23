@@ -73,11 +73,12 @@ public class Ex9_Worker {
 
 	public double calSalary() {
 		double salary;
-		if(productID > 0 && productID<= 199) {
+		
+		if(productID >0 && productID <= 199) {
 			 salary = 0.5 * productID;
-		}else if(productID >= 200 && productID <=399) {
+		}else if(productID <=399) {
 			salary = 0.55 * productID;
-		}else if(productID >= 400 && productID <=599) {
+		}else if(productID <=599) {
 			salary = 0.6 * productID;
 		}else {
 			salary = 0.65 * productID;
