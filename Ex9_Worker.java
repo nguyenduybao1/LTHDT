@@ -1,10 +1,10 @@
 package Ex9;
 
 public class Ex9_Worker {
-	private int maCn;
-	private String mHo;
-	private String mTen;
-	private int mSoSP;
+	private int id;
+	private String firstName;
+	private String lastName;
+	private int productID;
 	
 	
 	public Ex9_Worker() {
@@ -12,75 +12,92 @@ public class Ex9_Worker {
 	}
 
 
-	public Ex9_Worker(int maCn, String mHo, String mTen, int mSoSP) {
-		this.maCn = maCn;
-		this.mHo = mHo;
-		this.mTen = mTen;
-		this.mSoSP = mSoSP;
+
+	public Ex9_Worker(int id, String firstName, String lastName, int productID) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.productID = productID;
 	}
 
 
-	public int getMaCn() {
-		return maCn;
+
+	public int getId() {
+		return id;
 	}
 
 
-	public void setMaCn(int maCn) {
-		this.maCn = maCn;
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 
-	public String getmHo() {
-		return mHo;
+
+	public String getFirstName() {
+		return firstName;
 	}
 
 
-	public void setmHo(String mHo) {
-		this.mHo = mHo;
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
 
-	public String getmTen() {
-		return mTen;
+
+	public String getLastName() {
+		return lastName;
 	}
 
 
-	public void setmTen(String mTen) {
-		this.mTen = mTen;
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 
-	public int getmSoSP() {
-		return mSoSP;
+
+	public int getProductID() {
+		return productID;
 	}
 
 
-	public void setmSoSP(int mSoSP) {
-		this.mSoSP = mSoSP;
+
+	public void setProductID(int productID) {
+		this.productID = productID;
 	}
 
-	public double tinhLuong() {
-		double tinhLuong;
-		if(mSoSP > 0 && mSoSP<= 199) {
-			 tinhLuong = 0.5 * mSoSP;
-		}else if(mSoSP >= 200 && mSoSP <=399) {
-			tinhLuong = 0.55 * mSoSP;
-		}else if(mSoSP >= 400 && mSoSP <=599) {
-			tinhLuong = 0.6 * mSoSP;
+
+
+	public double calSalary() {
+		double salary;
+		if(productID > 0 && productID<= 199) {
+			 salary = 0.5 * productID;
+		}else if(productID >= 200 && productID <=399) {
+			salary = 0.55 * productID;
+		}else if(productID >= 400 && productID <=599) {
+			salary = 0.6 * productID;
 		}else {
-			tinhLuong = 0.65 * mSoSP;
+			salary = 0.65 * productID;
 		}
-		return tinhLuong;
+		return salary;
 	}
 	
 	public void hienThiCongNhan() {
-		System.out.printf(" %-10d %-10s %-10s %-10d \n", maCn, mHo, mTen, mSoSP);
+		System.out.printf(" %-10d %-10s %-10s %-10d \n", id, firstName, lastName, productID);
 	}
+
+
 
 	@Override
 	public String toString() {
-		return "CongNhan [maCn=" + maCn + ", mHo=" + mHo + ", mTen=" + mTen + ", mSoSP=" + mSoSP + "]";
+		return "Ex9_Worker [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", productID="
+				+ productID + "]";
 	}
+
+	
 	
 	
 }
